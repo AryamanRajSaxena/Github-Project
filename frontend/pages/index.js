@@ -15,7 +15,7 @@ export default function Home() {
         setError(""); // Reset error message before new login attempt
         try {
             // Send a request to authenticate the user
-            const response = await axios.post("http://localhost:3001/api/authenticate", {
+            const response = await axios.post("https://backend-roan-chi-19.vercel.app/", {
                 userID,
                 password: md5(password), // Hash the password before sending it to the API
             });
